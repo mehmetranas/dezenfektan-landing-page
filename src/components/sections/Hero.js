@@ -93,13 +93,13 @@ const Hero = ({
                   >
                     İletişim
                   </Button>
-                  <Button
-                    tag="a"
-                    color="dark"
-                    wideMobile
-                    href="https://github.com/cruip/open-react-template/"
-                  >
-                    Sertifikayı İndir
+                  <Button tag="a" color="dark" wideMobile>
+                    <a
+                      href={require("./../../assets/files/certificate.pdf")}
+                      download
+                    >
+                      Sertifikayı İndir
+                    </a>
                   </Button>
                 </ButtonGroup>
               </div>
