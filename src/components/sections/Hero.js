@@ -26,6 +26,16 @@ const Hero = ({
 }) => {
   const [videoModalActive, setVideomodalactive] = useState(false);
 
+  const scrollToContact = () => {
+    const element = document.getElementById("contact");
+
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   const openModal = (e) => {
     e.preventDefault();
     setVideomodalactive(true);
@@ -79,7 +89,7 @@ const Hero = ({
                     tag="a"
                     color="primary"
                     wideMobile
-                    href="https://cruip.com/"
+                    onClick={scrollToContact}
                   >
                     İletişim
                   </Button>
